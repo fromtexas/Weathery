@@ -1,0 +1,11 @@
+.y-grid {
+  path{
+    stroke: none;
+  }
+  .tick{
+    line{
+      stroke: $white;
+      opacity: 1;
+    }
+  }
+}

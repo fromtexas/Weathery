@@ -1,0 +1,41 @@
+#v1_chart {
+ overflow: visible;
+ padding-top: 10px;
+}
+
+.chart-flex{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  .current-weather{
+    flex:1;
+    padding: 1rem;
+    background-color: $line;
+    border-radius: 5px;
+    margin-left: 1rem;
+    box-shadow: 1px 1px 11px rgba(51, 51, 51, 0.7);
+    margin-right: 0.5rem;
+    z-index: 10;
+    position: relative;
+    h2{
+      color: #fff;
+    }
+    img{
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+}
+
+.y-grid{
+
+}
+
+.svg{
+  background-color: $background;
+  padding: 20px;
+  margin-right: 1rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
