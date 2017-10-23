@@ -8,13 +8,13 @@ class Grid extends Component {
   }
 
   renderGrid () {
-    var grid = this.refs.grid;
+    const grid = this.refs.grid;
     d3.select(grid).call(this.props.grid);
   }
   
   render () {
-    var translate = `translate(0, ${this.props.h})`;
-    var gridType = this.props.gridType=='x'?translate:'';
+    const translate = `translate(0, ${this.props.h})`;
+    const gridType = this.props.gridType=='x'?translate:'';
     return (
       <g ref='grid' className="y-grid" transform={gridType}>
       </g>

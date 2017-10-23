@@ -8,13 +8,13 @@ class Axis extends Component {
   }
 
   renderAxis () {
-    var axis = this.refs.axis;
+    const axis = this.refs.axis;
     d3.select(axis).call(this.props.axis);
   }
 
   render () {
-    var translate =`translate(0, ${this.props.h})`;
-    var axisType = this.props.axisType=='x'? translate : '';
+    const translate =`translate(0, ${this.props.h})`;
+    const axisType = this.props.axisType=='x'? translate : '';
     return (
       <g ref='axis' className='axis' transform={axisType} >
       </g>

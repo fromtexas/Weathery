@@ -5,14 +5,14 @@ class ToolTip extends Component {
 
   render () {
 
-    var visibility = 'hidden';
-    var transform = '';
-    var x = 0;
-    var y = 0;
-    var width = 150;
-    var height = 70;
-    var transformText = `translate(${width/2}, ${height/2-5})`;
-    var transformArrow = '';
+    let visibility = 'hidden';
+    let transform = '';
+    let x = 0;
+    let y = 0;
+    const width = 150;
+    const height = 70;
+    const transformText = `translate(${width/2}, ${height/2-5})`;
+    let transformArrow = '';
 
     if (this.props.tooltip.display === true) {
 
@@ -35,9 +35,9 @@ class ToolTip extends Component {
 
     return (
       <g transform={transform}>
-          <rect class='shadow' is width={width} height={height} rx='5' ry='5' visibility={visibility} fill='#007bff' opacity='.9'/>
+          <rect class='shadow' is width={width} height={height} rx='5' ry='5' visibility={visibility} fill='#f94c4c' opacity='.9'/>
           <polygon class='shadow' is points='10,0  30,0  20,10' transform={transformArrow}
-                   fill='#007bff' opacity='.9' visibility={visibility}/>
+                   fill='#f94c4c' opacity='.9' visibility={visibility}/>
           <text is visibility={visibility} transform={transformText}>
               <tspan is x='0' text-anchor='middle' font-size="15px" fill='#ffffff'>{this.props.tooltip.data.key}</tspan>
               <tspan is x='0' text-anchor='middle' dy='25' font-size='20px' fill='#ffffff'>{this.props.tooltip.data.value + ' ℃'}</tspan>

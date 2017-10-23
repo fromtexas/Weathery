@@ -46,16 +46,16 @@ class LineChart extends Component {
   }
 
   hideToolTip(e){
-      e.target.setAttribute('fill', '#007bff');
+      e.target.setAttribute('fill', '#f94c4c');
       this.setState({tooltip:{ display:false,data:{key:'',value:''}}});
   }
 
   render () {
 
-    var {forecast} = this.props;
+    const {forecast} = this.props;
 
 
-    var data = forecast.list.map((item) => {
+    let data = forecast.list.map((item) => {
       return {
         day: item.dt_txt,
         count: item.main.temp
@@ -70,11 +70,11 @@ class LineChart extends Component {
 
 
 
-    var margin = {top: 5, right: 50, bottom: 20, left: 50};
-    var w = this.state.width - (margin.left + margin.right);
-    var h = this.props.height - (margin.top + margin.bottom);
+    const margin = {top: 5, right: 50, bottom: 20, left: 50};
+    const w = this.state.width - (margin.left + margin.right);
+    const h = this.props.height - (margin.top + margin.bottom);
 
-    var parseDate = d3.timeParse('%Y-%m-%d %H:%M:%S');
+    const parseDate = d3.timeParse('%Y-%m-%d %H:%M:%S');
 
 
     data.forEach((d) => {
@@ -82,32 +82,32 @@ class LineChart extends Component {
     });
 
 
-    var x = d3.scaleTime().domain(d3.extent(data, (d) => {
+    const x = d3.scaleTime().domain(d3.extent(data, (d) => {
             return d.date;
         })).rangeRound([0, w]);
 
-    var y = d3.scaleLinear().domain([d3.min(data, (d) => {
+    const y = d3.scaleLinear().domain([d3.min(data, (d) => {
             return d.count;
         }), d3.max(data, (d) => {
             return d.count;
         })]).range([h, 0]);
 
-    var yAxis = d3.axisLeft(y).ticks(15);
+    const yAxis = d3.axisLeft(y).ticks(15);
 
-    var xAxis = d3.axisBottom(x).tickValues(data.map((d,i) => {
+    const xAxis = d3.axisBottom(x).tickValues(data.map((d,i) => {
             if(i>0)
                 return d.date;
         }).splice(1)).ticks(15);
 
-    var yGrid = d3.axisLeft(y).ticks(5).tickSize(-w, 0, 0).tickFormat('');
+   const yGrid = d3.axisLeft(y).ticks(5).tickSize(-w, 0, 0).tickFormat('');
 
-    var line = d3.line().x((d) => {
+    const line = d3.line().x((d) => {
             return x(d.date);
         }).y((d) => {
             return y(d.count);
         }).curve(d3.curveCardinalOpen.tension(0.5));
 
-    var transform = `translate(${margin.left}, ${margin.top})`;
+    const transform = `translate(${margin.left}, ${margin.top})`;
 
     return (
       <div>

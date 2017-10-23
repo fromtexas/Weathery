@@ -1,7 +1,7 @@
 import {getWeather} from 'API'
 
 
-let addWeather = (list) => {
+const addWeather = (list) => {
   return {
     type: 'ADD_WEATHER',
     list
@@ -9,7 +9,7 @@ let addWeather = (list) => {
 }
 
 
-export let startGetWeather = (city) => {
+export const startGetWeather = (city) => {
   return (dispatch, getState) => {
     return getWeather(city).then((res) => {
       dispatch(addWeather(res));

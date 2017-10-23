@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-var Placeholder = (props) => {
+var Placeholder = () => {
   return (
     <div className='placeholder text-center'>
       <h1>5 day weather forecast</h1>

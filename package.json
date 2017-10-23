@@ -1,14 +1,14 @@
 {
-  "name": "boilerplate",
+  "name": "weathery",
   "version": "1.0.0",
-  "description": "some shit",
+  "description": "react weather forecast app",
   "main": "index.js",
   "scripts": {
     "test": "karma start",
     "start": "npm run build && node server.js",
     "build": "webpack"
   },
-  "author": "vesk",
+  "author": "veskelen",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",

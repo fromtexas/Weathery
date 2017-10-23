@@ -7,13 +7,13 @@ import Placeholder from 'Placeholder'
 class Table extends Component {
 
   render(){
-    let {weather} = this.props;
-    let weatherList = weather.map((item) => {
+    const {weather} = this.props;
+    const weatherList = weather.map((item) => {
       return <LineChart key={item.city.id} forecast={item}/>
     });
   
 
-    var renderPlaceholder = () => {
+    const renderPlaceholder = () => {
       if(weatherList.length === 0) {
         return <Placeholder/>
       }

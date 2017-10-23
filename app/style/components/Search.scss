@@ -1,0 +1,15 @@
+.navbar-brand{
+    color: $button-color;
+    &:hover{
+        color: $button-color;
+    }
+}
+
+.form-control{
+        font-size: 1.1rem !important;
+        border-radius: 2px !important;
+        margin-right: .5rem !important;
+    &:focus{
+        border-color: $button-color !important;
+    }
+}
