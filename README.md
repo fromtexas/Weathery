@@ -4,7 +4,7 @@ React weather 5 day forecast app with d3 chart -> [Demo](http://frightening-bubb
 
 ![Weathery](https://image.ibb.co/kgP2wR/weathery.png)
 
-#Includes
+# Includes
 
 * react 
 * redux
@@ -16,7 +16,7 @@ React weather 5 day forecast app with d3 chart -> [Demo](http://frightening-bubb
 ## Features
 * display weather chart
 * display current weather
-* display weather for 5 day
+* display weather for 5 days
 
 ## Run on your Machine
    
