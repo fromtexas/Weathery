@@ -113,7 +113,7 @@ class LineChart extends Component {
 
     return (
 
-      <div className='chart-flex'>
+      <div className='weather__chart'>
         <div className='svg'>
           <svg ref='svg' id={this.props.chartId} width={this.state.width} height={this.props.height}>
 

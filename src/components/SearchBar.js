@@ -16,6 +16,9 @@ class SearchBar extends Component {
   get = (e) => {
     e.preventDefault();
     this.props.getWeatherAction(this.state.city);
+    this.setState({
+      city: ''
+    });
   }
 
   onChange = (e) => {

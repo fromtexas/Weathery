@@ -1,18 +1,18 @@
 import React, {Component} from 'react';
-import D3LineChart from './D3LineChart';
+import WeatherItem from './WeatherItem';
 
 export default class WeatherList extends Component{
     render () {
 
         const {forecast} = this.props;
 
-        const chart = forecast.map((item, index) => {
-            return <D3LineChart key={index} forecast={item} />
+        const item = forecast.map((item, index) => {
+            return <WeatherItem key={index} forecast={item}/> ;
         });
 
         return (
-            <div>
-                {chart}
+            <div className='weather__wrap'>
+                {item}
             </div>
         );
     }

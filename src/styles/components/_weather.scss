@@ -1,0 +1,28 @@
+.weather{
+    &__wrap{
+        
+    }
+
+    &__container{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(5, [col-start] minmax(min-content, 1fr) [col-end]);
+    }
+
+    &__current{
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    &__chart{
+        grid-row: 1 / 2;
+        grid-column: 2 / -1;
+    }
+
+    &__days{
+        grid-gap: 1rem;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(5, [col-start] minmax(min-content, 1fr) [col-end]);
+    }
+}
