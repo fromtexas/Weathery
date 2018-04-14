@@ -20,7 +20,7 @@ class Grid extends Component {
     const translate = `translate(0, ${this.props.h})`;
     const gridType = this.props.gridType=='x'?translate:'';
     return (
-      <g ref={this.grid} className="y-grid" transform={gridType}>
+      <g ref={this.grid} className="y-grid chart__grid" transform={gridType}>
       </g>
     )
   }

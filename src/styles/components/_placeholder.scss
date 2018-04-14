@@ -1,0 +1,12 @@
+.placeholder{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+
+    &__title{
+        color: $light-grey;
+        font-size: 4rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,30 @@
+.chart{
+    &__grid{
+        g{
+            line{
+                stroke: $light-grey;
+            }
+        }
+
+        path{
+            display: none;
+        }
+    }
+
+    &__axis{
+        path{
+            stroke: $light-grey;
+        }
+
+        g{
+            text{
+                fill: $light-grey;
+                font-size: 1rem;
+            }
+
+            line{
+                stroke: $light-grey;
+            }
+        }
+    }
+}

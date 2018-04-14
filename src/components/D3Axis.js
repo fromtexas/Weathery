@@ -20,7 +20,7 @@ class Axis extends Component {
     const translate =`translate(0, ${this.props.h})`;
     const axisType = this.props.axisType=='x'? translate : '';
     return (
-      <g ref={this.axis} className={`axis-${this.props.axisType}`} transform={axisType} >
+      <g ref={this.axis} className={`axis-${this.props.axisType} chart__axis`} transform={axisType} >
       </g>
     )
   }

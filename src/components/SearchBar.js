@@ -15,10 +15,14 @@ class SearchBar extends Component {
 
   get = (e) => {
     e.preventDefault();
-    this.props.getWeatherAction(this.state.city);
-    this.setState({
-      city: ''
-    });
+
+    if(this.state.city.length){
+      this.props.getWeatherAction(this.state.city);
+      this.setState({
+        city: ''
+      });
+    }
+    
   }
 
   onChange = (e) => {
@@ -29,6 +33,7 @@ class SearchBar extends Component {
     return (
       <div className='searchbar'>
         <form onSubmit={this.get} className='searchbar__form'>
+          <a className='searchbar__title' href='#'>Weathery</a>
           <input value={this.state.city} onChange={this.onChange} className='searchbar__input' type='text' placeholder='Enter city' />
           <button className='searchbar__button' type='submit'>Confirm</button>
         </form>

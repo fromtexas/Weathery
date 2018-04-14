@@ -12,6 +12,13 @@
     &__current{
         grid-row: 1 / 2;
         grid-column: 1 / 2;
+        font-size: 1.6rem;
+        color: $light-grey;
+        padding: 2rem;
+
+        span{
+            color: $pink;
+        }
     }
 
     &__chart{
@@ -20,9 +27,34 @@
     }
 
     &__days{
-        grid-gap: 1rem;
+        grid-row-gap: 2rem;
+        grid-column-gap: 5rem;
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: repeat(5, [col-start] minmax(min-content, 1fr) [col-end]);
+        grid-template-rows: repeat(2, min-content);
+
+        font-size: 1.6rem;
+        color: $light-grey;
+        padding: 2rem;
+    }
+
+    &__day-item{
+        grid-row: 2 / 3;
+    }
+
+    &__forecast-title{
+        grid-column: 1 / -1;
+        justify-self: center;
+    }
+
+    &__forecast{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__temp{
+        color: $pink;
     }
 }

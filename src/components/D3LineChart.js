@@ -48,23 +48,23 @@ class LineChart extends Component {
         this.setState({tooltip:{ display:false,data:{key:'',value:''}}});
     }
 
-  render () {
+    render () {
 
-    const {forecast} = this.props;
+        const {forecast} = this.props;
 
 
-    let data = forecast.list.map((item) => {
-        return {
-            day: item.dt_txt,
-            count: item.main.temp
-        };
-    });
+        let data = forecast.list.map((item) => {
+            return {
+                day: item.dt_txt,
+                count: item.main.temp
+            };
+        });
 
-   data = data.filter((item) => {
-        if(item.day.indexOf('09:00:00') != -1 || item.day.indexOf('15:00:00') != -1 || item.day.indexOf('21:00:00') != -1 ){
-            return item;
-        }
-    });
+        data = data.filter((item) => {
+            if(item.day.indexOf('09:00:00') != -1 || item.day.indexOf('15:00:00') != -1 || item.day.indexOf('21:00:00') != -1 ){
+                return item;
+            }
+        });
 
 
 

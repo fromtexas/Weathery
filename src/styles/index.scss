@@ -1,10 +1,12 @@
 @import './abstract/variables';
 @import './abstract/mixins';
 @import './base/base';
+@import './base/typography';
 
 @import './layout/container';
 
 @import './components/searchbar';
 @import './components/weather';
-
+@import './components/placeholder';
+@import './components/chart';
 
