@@ -2,7 +2,7 @@ import React from 'react';
 import {filterWeatherList} from '../utils/filterWeatherList';
 import DayItem from './DayItem';
 
-export default props => {
+const FiveDayList = props => {
     let result = filterWeatherList(props.list);
     let weatherList = [];
     for (let date in result){
@@ -15,3 +15,5 @@ export default props => {
         </div>
     );
 };
+
+export default FiveDayList;

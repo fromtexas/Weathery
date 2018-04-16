@@ -115,7 +115,7 @@ class LineChart extends Component {
 
       <div className='weather__chart'>
         <div className='svg'>
-          <svg ref='svg' id={this.props.chartId} width={this.state.width} height={this.props.height}>
+          <svg id={this.props.chartId} width={this.state.width} height={this.props.height}>
 
               <g transform={transform}>
 

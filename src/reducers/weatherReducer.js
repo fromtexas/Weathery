@@ -7,4 +7,4 @@ export default function weatherReducer(state = [], action) {
     default:
       return state;
   }
-};
+}
