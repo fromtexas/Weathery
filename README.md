@@ -1,6 +1,6 @@
 # Weathery
 
-React weather 5 day forecast app with d3 chart -> [Demo](http://frightening-bubble.surge.sh/)
+React weather 5 day forecast app with d3 chart -> [Demo](http://parched-dime.surge.sh/)
 
 ![Weathery](https://image.ibb.co/kgP2wR/weathery.png)
 
