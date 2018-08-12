@@ -6,10 +6,6 @@ export const filterWeatherList = arr => {
     arr.forEach(item => {
         dt_txt = item.dt_txt.slice(0, 10);
         mappedArr[dt_txt] = [];
-    });
-
-    arr.forEach(item => {
-        dt_txt = item.dt_txt.slice(0, 10);
         mappedArr[dt_txt].push(item);
     });
 
