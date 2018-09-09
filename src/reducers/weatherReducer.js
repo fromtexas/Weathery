@@ -1,4 +1,4 @@
-import {ADD_WEATHER} from '../constants/actionTypes'; 
+import { ADD_WEATHER } from "../constants/actionTypes";
 
 export default function weatherReducer(state = [], action) {
   switch (action.type) {
