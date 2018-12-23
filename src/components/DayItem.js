@@ -1,9 +1,9 @@
 import React from "react";
 import moment from "moment";
+import { extractDate } from "../utils/filterWeatherList";
 
 const DayItem = props => {
-  let dt_txt = props.day[0].dt_txt.slice(0, 10);
-
+  let dt_txt = extractDate(props.day[0]);
   const dayWeather = props.day.map((item, index) => {
     return (
       <div className="weather__forecast" key={`${item.dt_txt}${index}`}>

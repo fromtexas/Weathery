@@ -49,34 +49,11 @@ class LineChart extends Component {
   };
 
   render() {
-    const { forecast } = this.props;
-
-    let data = forecast.list.map(item => {
-      return {
-        day: item.dt_txt,
-        count: item.main.temp
-      };
-    });
-
-    data = data.filter(item => {
-      if (
-        item.day.indexOf("09:00:00") != -1 ||
-        item.day.indexOf("15:00:00") != -1 ||
-        item.day.indexOf("21:00:00") != -1
-      ) {
-        return item;
-      }
-    });
+    const data = this.props.forecast;
 
     const margin = { top: 5, right: 50, bottom: 20, left: 50 };
     const w = this.state.width - (margin.left + margin.right);
     const h = this.props.height - (margin.top + margin.bottom);
-
-    const parseDate = d3.timeParse("%Y-%m-%d %H:%M:%S");
-
-    data.forEach(d => {
-      d.date = parseDate(d.day);
-    });
 
     const x = d3
       .scaleTime()
