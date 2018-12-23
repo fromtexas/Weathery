@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import WeatherItem from "./WeatherItem";
 
 export default class WeatherList extends Component {
@@ -12,3 +13,7 @@ export default class WeatherList extends Component {
     return <div className="weather__wrap">{item}</div>;
   }
 }
+
+WeatherList.propTypes = {
+  forecast: PropTypes.array
+};

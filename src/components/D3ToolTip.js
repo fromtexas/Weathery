@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class ToolTip extends Component {
   render() {
@@ -66,5 +67,9 @@ class ToolTip extends Component {
     );
   }
 }
+
+ToolTip.propTypes = {
+  tooltip: PropTypes.object
+};
 
 export default ToolTip;

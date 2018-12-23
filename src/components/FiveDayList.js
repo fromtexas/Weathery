@@ -1,9 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { parseWeatherList } from "../utils/filterWeatherList";
 import DayItem from "./DayItem";
 
 const FiveDayList = props => {
-  console.log(parseWeatherList(props.list));
   const weatherList = parseWeatherList(props.list).map(item => {
     return <DayItem key={item[0].dt} day={item} />;
   });
@@ -13,6 +13,10 @@ const FiveDayList = props => {
       {weatherList}
     </div>
   );
+};
+
+FiveDayList.propTypes = {
+  list: PropTypes.array
 };
 
 export default FiveDayList;

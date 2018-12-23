@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
-
+import PropTypes from "prop-types";
 import Dots from "./D3Dots";
 import Axis from "./D3Axis";
 import Grid from "./D3Grid";
@@ -22,6 +22,10 @@ class LineChart extends Component {
   componentDidMount = () => {
     window.addEventListener("resize", this.updateDimensions);
   };
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", () => {});
+  }
 
   showToolTip = e => {
     e.target.setAttribute("fill", "#FFFFFF");
@@ -50,7 +54,6 @@ class LineChart extends Component {
 
   render() {
     const data = this.props.forecast;
-
     const margin = { top: 5, right: 50, bottom: 20, left: 50 };
     const w = this.state.width - (margin.left + margin.right);
     const h = this.props.height - (margin.top + margin.bottom);
@@ -146,6 +149,13 @@ class LineChart extends Component {
     );
   }
 }
+
+LineChart.propTypes = {
+  forecast: PropTypes.array,
+  height: PropTypes.number,
+  width: PropTypes.number,
+  chartId: PropTypes.string
+};
 
 LineChart.defaultProps = {
   width: parseInt(window.innerWidth / 1.3),

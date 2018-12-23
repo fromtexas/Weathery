@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import Placeholder from "./Placeholder";
 import WeatherList from "./WeatherList";
 
@@ -12,6 +13,10 @@ class WeatherListContainer extends Component {
     return <WeatherList forecast={this.props.weather} />;
   }
 }
+
+WeatherListContainer.propTypes = {
+  weather: PropTypes.object
+};
 
 const mapStateToProps = ({ weather }) => ({
   weather

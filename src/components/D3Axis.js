@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
+import PropTypes from "prop-types";
 
 class Axis extends Component {
   constructor(props) {
@@ -27,5 +28,11 @@ class Axis extends Component {
     );
   }
 }
+
+Axis.propTypes = {
+  axis: PropTypes.func,
+  axisType: PropTypes.string,
+  h: PropTypes.number
+};
 
 export default Axis;

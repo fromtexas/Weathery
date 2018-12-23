@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import D3LineChart from "./D3LineChart";
 import CurrentWeather from "./CurrentWeather";
 import FiveDayList from "./FiveDayList";
@@ -11,5 +12,9 @@ const WeatherItem = props => (
     <FiveDayList list={props.forecast.list} />
   </div>
 );
+
+WeatherItem.propTypes = {
+  forecast: PropTypes.object
+};
 
 export default WeatherItem;

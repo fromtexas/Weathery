@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { getWeatherAction } from "../actions/weatherActions";
 import { connect } from "react-redux";
 
@@ -47,6 +48,10 @@ class SearchBar extends Component {
     );
   }
 }
+
+SearchBar.propTypes = {
+  getWeatherAction: PropTypes.func
+};
 
 export default connect(
   null,

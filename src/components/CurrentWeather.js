@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const CurrentWeather = props => (
   <div className="weather__current">
@@ -22,5 +23,9 @@ const CurrentWeather = props => (
     />
   </div>
 );
+
+CurrentWeather.propTypes = {
+  forecast: PropTypes.object
+};
 
 export default CurrentWeather;

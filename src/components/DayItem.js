@@ -1,5 +1,6 @@
 import React from "react";
 import moment from "moment";
+import PropTypes from "prop-types";
 import { extractDate } from "../utils/filterWeatherList";
 
 const DayItem = props => {
@@ -21,6 +22,10 @@ const DayItem = props => {
       {dayWeather}
     </div>
   );
+};
+
+DayItem.propTypes = {
+  day: PropTypes.array
 };
 
 export default DayItem;
