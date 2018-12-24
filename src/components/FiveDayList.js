@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { parseWeatherList } from "../utils/filterWeatherList";
 import DayItem from "./DayItem";
 
-const FiveDayList = props => {
-  const weatherList = parseWeatherList(props.list).map(item => {
+const FiveDayList = ({ list }) => {
+  const weatherList = parseWeatherList(list).map(item => {
     return <DayItem key={item[0].dt} day={item} />;
   });
   return (

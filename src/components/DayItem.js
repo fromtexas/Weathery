@@ -3,9 +3,9 @@ import moment from "moment";
 import PropTypes from "prop-types";
 import { extractDate } from "../utils/filterWeatherList";
 
-const DayItem = props => {
-  let dt_txt = extractDate(props.day[0]);
-  const dayWeather = props.day.map((item, index) => {
+const DayItem = ({ day }) => {
+  let dt_txt = extractDate(day[0]);
+  const dayWeather = day.map((item, index) => {
     return (
       <div className="weather__forecast" key={`${item.dt_txt}${index}`}>
         <p>{moment.unix(item.dt).format("MMMM Do, YYYY @ k:mm")}:</p>

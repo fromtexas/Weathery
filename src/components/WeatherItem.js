@@ -5,11 +5,11 @@ import CurrentWeather from "./CurrentWeather";
 import FiveDayList from "./FiveDayList";
 import { parseForecastData } from "../utils/filterWeatherList";
 
-const WeatherItem = props => (
+const WeatherItem = ({ forecast }) => (
   <div className="weather__container">
-    <CurrentWeather forecast={props.forecast} />
-    <D3LineChart forecast={parseForecastData(props.forecast)} />
-    <FiveDayList list={props.forecast.list} />
+    <CurrentWeather forecast={forecast} />
+    <D3LineChart forecast={parseForecastData(forecast)} />
+    <FiveDayList list={forecast.list} />
   </div>
 );
 
